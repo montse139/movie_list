@@ -1,0 +1,74 @@
+body {
+    background-color: grey;
+    font-family: Helvetica;
+}
+
+h1 {
+    font-family: Helvetica;
+    text-align: center;
+    color: black;
+    font-size: 50px;
+}
+
+form {
+    font-size: 20px;
+    text-align: left;
+    position: absolute;
+    left: 600px;
+}
+
+table th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+table td {
+    border-collapse: collapse;
+    padding: 15px;
+    background-color: #eee
+}
+
+.movie_form input, .contact_form textarea {
+    padding: 6px;
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+}
+.movie_form input:focus, .contact_form textarea:focus {
+    background: #fff;
+    border:1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+}
+
+img {
+    width: 350px;
+}
+
+a {
+    text-align: center;
+}
+
+.movie_table {
+    background-color: #eee;
+    padding: 20px;
+    text-align: left;
+
+}
+
+
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}

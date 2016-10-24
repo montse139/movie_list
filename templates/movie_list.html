@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<br>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Movie List</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Movie List</h1>
+
+    <a href="/movie_list/add">Add a movie</a>
+    <br>
+    <br>
+
+
+        <div class="movie_form">
+            {% for movie in movies %}
+
+            <div class="movie_table">
+                <b>{{ movie.title }}</b>
+                <br>
+                <br>
+                <img src="{{ movie.picture }}"/>
+                <br>
+                <b>Directed by</b> {{ movie.director }}
+                <br>
+                <b>Crew:</b> {{ movie.actors }}
+                <br>
+                {{ movie.synopsis }}
+                <br>
+                Rating: {{ movie.rating }}
+                <br>
+                <div class="rating">
+                    <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
+                    <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
+                    <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
+                    <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
+                    <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        {% endfor %}
+
+
+</body>
+</html>
