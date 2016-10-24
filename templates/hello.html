@@ -8,7 +8,7 @@
 </head>
     <h1>Movie List</h1>
 
-    <form method="post" action="/">
+    <form method="post" action="/movie_list/add">
         <div class="movie_form">
             Title<br>
             <input type="text" name="title" size="30px"><br>
@@ -20,18 +20,18 @@
             <input type="text" name="actors" size="30px"><br>
             <br>
             Synopsis<br>
-            <textarea cols="100" rows="10" name="name" type="synopsis"></textarea><br>
+            <textarea cols="100" rows="10" name="synopsis"></textarea><br>
             <br>
             Picture<br>
             <input type="url" name="picture" size="30px"><br>
             <br>
-            Rating<br>
-            <input type="number" name="rating" min="1" max="5"><br>
             <br>
+            Rating<br>
+            <input type="number" name="rating" min="1" max="5" value="3"><br>
+            <br>
+            <input type="submit" value="Submit">
         </div>
-    <div>
-        <input type="submit" value="Submit">
-    </div>
+
     </form>
 
 </body>

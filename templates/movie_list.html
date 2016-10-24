@@ -12,11 +12,7 @@
     <a href="/movie_list/add">Add a movie</a>
     <br>
     <br>
-
-
-        <div class="movie_form">
-            {% for movie in movies %}
-
+    {% for movie in movies %}
             <div class="movie_table">
                 <b>{{ movie.title }}</b>
                 <br>
@@ -31,19 +27,18 @@
                 <br>
                 Rating: {{ movie.rating }}
                 <br>
-                <div class="rating">
-                    <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
-                    <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
-                    <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
-                    <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
-                    <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
+                <div class="rate_element">
+                    <form action="/movie_list/{{ movie.key.id() }}/rate" method="post" id="myform">
+                        <input type="radio" name="rating" id="str5" value="1" onclick="this.form.submit()"/>
+                        <input type="radio" name="rating" id="str4" value="2" onclick="this.form.submit()" />
+                        <input type="radio" name="rating" id="str3" value="3" onclick="this.form.submit()" />
+                        <input type="radio" name="rating" id="str2" value="4" onclick="this.form.submit()" />
+                        <input type="radio" name="rating" id="str1" value="5" onclick="this.form.submit()" />
+                    </form>
                 </div>
                 <br>
                 <br>
             </div>
-        </div>
         {% endfor %}
-
-
 </body>
 </html>
